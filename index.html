@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <h3>{{message}}</h3>
+
+      <h1 v-if="awesome">Vue is awesome! 🥰</h1>
+      <h1 v-else>Oh no 😢</h1>
+
+      <h1 v-show="awesome">Which please!</h1>
+
+      <ul id="example-1">
+        <li v-for="item in items" :key="item.message">{{ item.message }}</li>
+      </ul>
+
+      <ul id="example-2">
+        <li v-for="(item, index) in items">
+          {{ parentMessage }} - {{ index }} - {{ item.message }}
+        </li>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
